@@ -213,6 +213,7 @@ td { vertical-align: top; }
    ========================================================================== */
 
 body {
+    background-color: #fefefe;
     font-family: "Hevetica Neue", Helvetica, sans-serif;
     font-weight: 300;
     margin: 0;
@@ -226,7 +227,25 @@ h1 {
 
 h2 {
     clear: both;
-    font-size: 1.2em;
+    font-size: 1.1em;
+}
+
+.widget h1, .widget h2 {
+    font-family: monospace;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a.external:after {
+	margin-left: 0.5em;
+	content: url('/img/extlink.png');	
+	text-decoration: none;
 }
 
 pre.prettyprint {
