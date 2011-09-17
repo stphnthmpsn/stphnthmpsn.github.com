@@ -235,10 +235,16 @@ h2 {
 }
 
 a {
+	color: #333;
     text-decoration: none;
 }
 
+a:visited {
+	color: #333;
+}
+
 a:hover {
+	color: #9acd32;
     text-decoration: underline;
 }
 
@@ -300,6 +306,57 @@ pre.prettyprint {
 	top: 6px;
 }
 
+.tooltip {
+  position: relative;
+}
+
+.tooltip .detail {
+	visibility: hidden;
+	position: absolute;
+	border: 1px solid #adff2f;
+	padding: 5px;
+	opacity: .9;
+	background-color: #ffffff;
+	background-image: -webkit-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.5));
+	background-image: -moz-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.5));
+	background-image: -ms-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.5));
+	background-image: -o-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.5));
+	background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.5));
+	-moz-box-shadow: 2px 2px 1px #dddddd;
+	-webkit-box-shadow: 2px 2px 1px #dddddd;
+	box-shadow: 2px 2px 1px #dddddd;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.tooltip .detail p {
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+}
+
+.tooltip:hover .detail {
+	visibility: visible;
+	z-index: 999;
+}
+
+.tooltip .detail:before, .tooltip .detail:after {
+	content: "";
+	position: absolute;
+	z-index: 1000;
+	left: 24px;
+	margin-left: -8px;
+	margin-top: -8px;
+	top: 0;
+	border-width: 8px;
+	border-style: solid;
+	border-color: transparent transparent #adff2f transparent;
+	border-top: 0;
+}
+
+.tooltip .detail:before {
+	margin-left: -7px;
+	border-bottom-color: #dddddd;
+}
 
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
